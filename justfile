@@ -7,9 +7,9 @@ _npm_check:
 install: _npm_check
   npm install
 
-# Start dev server — serves spike/ directory
+# Start dev server
 dev: _npm_check
-  npm run spike
+  npm run dev
 
 # Build for production (requires Phase 1 scaffolding)
 build: _npm_check
@@ -19,9 +19,9 @@ build: _npm_check
 preview: _npm_check
   npm run build && npm run preview
 
-# Run tests (runner TBD pending Phase-0 spike findings)
-test:
-  @echo "No test runner configured yet — see Phase-0 spike findings (CLT issues)."
+# Run tests
+test: _npm_check
+  npm test
 
 # Run spell check
 spellcheck:
