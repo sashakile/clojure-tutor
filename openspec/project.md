@@ -48,8 +48,7 @@ building muscle memory that transfers directly to their real editor.
 
 ### Testing Strategy
 
-- **Test runner**: TBD — Phase-0 spike determines whether Jest, Playwright, or
-  a custom harness fits. Add `just test` once the runner is chosen.
+- **Test runner**: vitest (confirmed by Phase 0 spike; `npm test` runs `vitest run`)
 - Integration tests for squint compile → eval pipeline
 - Normalized SVG structural comparison for milestone validation (no pixel diff)
 - Integer coordinates eliminate floating-point comparison edge cases
