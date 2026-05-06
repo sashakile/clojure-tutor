@@ -1,0 +1,88 @@
+# Squint Structural Editing Tutor
+
+A zero-install, browser-based tutor that teaches structural editing of Lisp
+code (specifically Clojure, evaluated through the squint dialect) through
+progressive, learn-by-doing lessons.
+
+## What it is
+
+- A single-page web app; no installation, no JVM, no backend.
+- Teaches both structural editing operations AND the keybindings of the user's
+  chosen editor profile (Calva, Vim/Conjure, Emacs/CIDER, Doom Emacs, etc.)
+- The keybinding IS the lesson: muscle memory that transfers to real editors.
+
+## How it works
+
+Users navigate a slide-deck curriculum with two pane layout: lessons on the
+left, a persistent REPL on the right. Each interactive cell is a real
+CodeMirror 6 editor with `@nextjournal/clojure-mode` paredit operations.
+Code evaluates live via squint (ClojureScript-like dialect → JavaScript).
+
+Validation has three modes:
+- **Result-based**: does the code produce the right output?
+- **Structure-based**: does the AST match a target shape?
+- **Action-based**: did the user actually press the taught keybinding?
+
+Navigation is never blocked: advancement is always free, completion is
+recorded as feedback, not a gate.
+
+## The project artifact
+
+The curriculum is anchored by a continuous SVG artifact: a stylized tree that
+evolves into a grove across 9 chapters. Chapters 1–6 are refactoring (the
+picture stays identical); chapters 7–8 are feature work (the picture evolves);
+chapter 9 (Freeplay) is open-ended. Chapter milestones validate by normalized
+SVG structural comparison — strict, integer coordinates, no floating-point noise.
+
+## Tech stack
+
+| Layer | Choice |
+|-------|--------|
+| Language | squint (ClojureScript-like, compiles to JS) |
+| UI | squint + React interop |
+| Editor | CodeMirror 6 + `@nextjournal/clojure-mode` |
+| Vim mode | `@replit/codemirror-vim` |
+| Emacs mode | `@codemirror/keymap-emacs` |
+| Build | Vite + squint-cljs |
+| Persistence | `localStorage` / `window.storage` |
+
+## Repository layout
+
+```
+openspec/          OpenSpec change proposals and specs
+.wai/              wai workspace (PARA structure, agent configs, skills)
+.beads/            bd issue tracker (Dolt-backed)
+justfile           Common development tasks
+```
+
+## Key concepts (ubiquitous language)
+
+See `.wai/resources/ubiquitous-language/` for the full glossary. Core terms:
+
+- **Form** — an s-expression; the fundamental unit of structural editing
+- **Profile** — a named set of keybindings (Calva, Vim/Conjure, Emacs/CIDER…)
+- **Slide** — one screen of curriculum content
+- **Cell** — interactive CodeMirror editor embedded in a slide
+- **Session namespace** — accumulated definitions shared across all cells + REPL
+- **Snapshot** — canonical starting code for each chapter (S0–S8)
+- **Milestone** — chapter-end slide validated by SVG structural comparison
+- **Advanced-past** — visited without completing; not "skipped"
+
+## Build phases
+
+Phase 0: Spike on CM6 command observation (action-based validation feasibility)
+Phase 1: Two-pane layout, one cell, squint pipeline, persistent REPL
+Phase 2: Profile system, Calva profile, keybinding substitution
+Phase 3: Lesson runner, result-based validation, SVG project foundation
+Phase 4: Action-based validation, hint escalation, first project milestone
+Phase 5: Structure-based validation, refactoring chapters 1–6
+Phase 6: Feature chapters 7–8, Freeplay
+Phase 7: Vim/Conjure profile
+Phase 8: Emacs/CIDER, Doom Emacs, custom profile editor
+Phase 9: Polish, i18n, accessibility, bonus Animate chapter
+
+## Links
+
+- Spec: squint-structural-editing-tutor-spec.md (Design Specification v0.2)
+- `@nextjournal/clojure-mode`: CodeMirror 6 structural editing extension
+- squint: ClojureScript-like in-browser compiler

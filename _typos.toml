@@ -1,0 +1,16 @@
+[default]
+extend-ignore-identifiers-re = [
+  # Clojure/squint specific
+  "defn",
+  "defonce",
+  "macroexpand",
+]
+
+[files]
+extend-exclude = [
+  "node_modules",
+  ".beads",
+  ".wai",
+  "openspec",
+  "dist",
+]
