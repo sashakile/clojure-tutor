@@ -1,6 +1,6 @@
 # Change: Phase 0 spike — confirm CM6 action observation is viable
 
-**Status:** Proposed
+**Status:** Resolved
 
 ## Why
 
