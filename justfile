@@ -7,9 +7,9 @@ _npm_check:
 install: _npm_check
   npm install
 
-# Start dev server (requires Phase 1 scaffolding)
+# Start dev server — serves spike/ directory
 dev: _npm_check
-  npm run dev
+  npm run spike
 
 # Build for production (requires Phase 1 scaffolding)
 build: _npm_check
