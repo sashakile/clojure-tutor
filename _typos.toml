@@ -1,16 +1,40 @@
 [default]
 extend-ignore-identifiers-re = [
-  # Clojure/squint specific
+  # Clojure/squint special forms and macros
   "defn",
   "defonce",
+  "defmacro",
+  "defmulti",
+  "defmethod",
+  "defrecord",
+  "defprotocol",
   "macroexpand",
+  "doseq",
+  "dotimes",
+  "deref",
+  "dissoc",
+  "conj",
+  # Structural editing / paredit domain terms
+  "sexp",
+  "paredit",
+  "barf",
+  "convolute",
+  # Common abbreviations in the codebase (both lowercase and uppercase)
+  "cljs",
+  "CLJS",
+  "edn",
+  "EDN",
+  "repl",
+  "REPL",
+  "hiccup",
+  "reagent",
 ]
 
 [files]
 extend-exclude = [
   "node_modules",
   ".beads",
-  ".wai",
-  "openspec",
   "dist",
+  # Code-heavy file; identifiers would generate many false positives
+  "llm.txt",
 ]

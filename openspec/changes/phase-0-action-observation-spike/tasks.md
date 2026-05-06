@@ -1,5 +1,8 @@
 # Tasks: phase-0-action-observation-spike
 
+> **Note**: Live status is tracked in bd (prefix CLT — run `bd list`).
+> This file is the definition of done — acceptance criteria and task breakdown only.
+
 ## Setup
 
 - [ ] Initialize a minimal Vite project with squint + CodeMirror 6

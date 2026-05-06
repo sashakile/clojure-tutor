@@ -12,9 +12,6 @@ cells and the REPL. Reset on profile switch.
 and shallow-merging `:bindings` maps to produce a flat command-keyword →
 keybinding-string map.
 
-**Projection** — in wai terms, a mapping from agent-config (skills, rules)
-to a tool-specific location (e.g., claude-code).
-
 **Normalized SVG comparison** — parsing both SVGs into a tree, sorting element
 attributes alphabetically, normalizing whitespace, then comparing structurally.
 Never string equality, never pixel rasterization.

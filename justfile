@@ -1,20 +1,27 @@
 # Squint Structural Editing Tutor
 
-# Install dependencies
-install:
+_npm_check:
+  @test -f package.json || (echo "No package.json found — wait for Phase 1 scaffolding or run 'npm init'." && exit 1)
+
+# Install dependencies (requires Phase 1 scaffolding)
+install: _npm_check
   npm install
 
-# Start dev server
-dev:
+# Start dev server (requires Phase 1 scaffolding)
+dev: _npm_check
   npm run dev
 
-# Build for production
-build:
+# Build for production (requires Phase 1 scaffolding)
+build: _npm_check
   npm run build
 
-# Preview production build
-preview:
-  npm run preview
+# Preview production build (requires Phase 1 scaffolding)
+preview: _npm_check
+  npm run build && npm run preview
+
+# Run tests (runner TBD pending Phase-0 spike findings)
+test:
+  @echo "No test runner configured yet — see Phase-0 spike findings (CLT issues)."
 
 # Run spell check
 spellcheck:
@@ -22,11 +29,6 @@ spellcheck:
 
 # Check code formatting and lint
 check: spellcheck
-
-# Evaluate squint code snippet (for testing)
-# Usage: just eval "(+ 1 2)"
-eval expr:
-  node -e "import('squint-cljs').then(s => s.compileString('{{expr}}').then(console.log))"
 
 # Show wai project status
 status:

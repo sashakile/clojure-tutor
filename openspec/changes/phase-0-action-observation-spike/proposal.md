@@ -1,5 +1,7 @@
 # Change: Phase 0 spike — confirm CM6 action observation is viable
 
+**Status:** Proposed
+
 ## Why
 
 Action-based validation is the signature capability of this tutor: it confirms

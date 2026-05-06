@@ -52,6 +52,9 @@ context before starting research or creating tickets.
 
 > **Before research or ticket creation**: always run `wai search "<topic>"` to
 > check for known patterns. Do not rediscover what is already documented.
+
+> **Domain vocabulary**: `.wai/resources/ubiquitous-language/` — consult these
+> terms before generating code, specs, or prose. Precise vocabulary reduces drift.
 <!-- WAI:REFLECT:REF:END -->
 
 
