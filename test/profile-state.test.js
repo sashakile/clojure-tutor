@@ -40,6 +40,17 @@ describe("profile state", () => {
     unsubscribe();
   });
 
+  it("setActiveProfile is a no-op for unknown profile IDs", () => {
+    const calls = [];
+    const unsubscribe = onProfileChange((next) => calls.push(next));
+
+    setActiveProfile("missing-profile");
+
+    expect(getActiveProfile()).toBe("default");
+    expect(calls).toEqual([]);
+    unsubscribe();
+  });
+
   it("unsubscribe prevents future calls", () => {
     const calls = [];
     const unsubscribe = onProfileChange((next) => calls.push(next));

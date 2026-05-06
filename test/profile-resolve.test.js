@@ -12,24 +12,24 @@ describe("resolveBindings", () => {
       parent: {
         id: "parent",
         bindings: {
-          ":slurp-forward": "Ctrl-ArrowRight",
-          ":barf-forward": "Ctrl-ArrowLeft",
+          "slurp-forward": "Ctrl-ArrowRight",
+          "barf-forward": "Ctrl-ArrowLeft",
         },
       },
       child: {
         id: "child",
         extends: "parent",
         bindings: {
-          ":slurp-forward": "Ctrl-Alt-ArrowRight",
-          ":raise-sexp": "Ctrl-Alt-r",
+          "slurp-forward": "Ctrl-Alt-ArrowRight",
+          "raise-sexp": "Ctrl-Alt-r",
         },
       },
     };
 
     expect(resolveBindings("child", registry)).toEqual({
-      ":slurp-forward": "Ctrl-Alt-ArrowRight",
-      ":barf-forward": "Ctrl-ArrowLeft",
-      ":raise-sexp": "Ctrl-Alt-r",
+      "slurp-forward": "Ctrl-Alt-ArrowRight",
+      "barf-forward": "Ctrl-ArrowLeft",
+      "raise-sexp": "Ctrl-Alt-r",
     });
   });
 

@@ -21,7 +21,7 @@ describe("PROFILES registry", () => {
   it("stores command-keyword bindings as strings", () => {
     for (const profile of Object.values(PROFILES)) {
       for (const [command, key] of Object.entries(profile.bindings)) {
-        expect(command).toMatch(/^:[a-z-]+$/);
+        expect(command).toMatch(/^[a-z-]+$/);
         expect(typeof key).toBe("string");
         expect(key.length).toBeGreaterThan(0);
       }
@@ -30,12 +30,12 @@ describe("PROFILES registry", () => {
 
   it("uses the researched Calva bindings as the Calva profile source", () => {
     const calvaBindings = Object.fromEntries(
-      CALVA_BINDINGS.map(({ label, key }) => [`:${label}`, key])
+      CALVA_BINDINGS.map(({ label, key }) => [label, key])
     );
 
     expect(PROFILES.calva.bindings).toEqual(calvaBindings);
-    expect(PROFILES.calva.bindings[":slurp-forward"]).toBe("Ctrl-Alt-ArrowRight");
-    expect(PROFILES.calva.bindings[":join-sexp"]).toBe("Ctrl-Shift-j");
+    expect(PROFILES.calva.bindings["slurp-forward"]).toBe("Ctrl-Alt-ArrowRight");
+    expect(PROFILES.calva.bindings["join-sexp"]).toBe("Ctrl-Shift-j");
   });
 
   it("uses profile-specific leader keys", () => {

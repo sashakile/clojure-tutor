@@ -1,3 +1,5 @@
+import { PROFILES } from "./registry.js";
+
 let activeProfile = "default";
 const subscribers = new Set();
 
@@ -6,7 +8,7 @@ export function getActiveProfile() {
 }
 
 export function setActiveProfile(id) {
-  if (id === activeProfile) return;
+  if (!PROFILES[id] || id === activeProfile) return;
 
   const previous = activeProfile;
   activeProfile = id;

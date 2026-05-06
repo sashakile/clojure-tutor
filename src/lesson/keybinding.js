@@ -8,7 +8,7 @@ export function renderKeybindings(container) {
 
     placeholders.forEach((element) => {
       const command = element.dataset.command;
-      const keyword = command.startsWith(":") ? command : `:${command}`;
+      const keyword = command.startsWith(":") ? command.slice(1) : command;
       element.textContent = bindings[keyword] ?? command;
     });
   };

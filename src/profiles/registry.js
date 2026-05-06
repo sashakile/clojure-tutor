@@ -2,7 +2,7 @@ import { CALVA_BINDINGS } from "../calva.js";
 
 function bindingsByKeyword(bindings) {
   return Object.fromEntries(
-    bindings.map(({ label, key }) => [`:${label}`, key])
+    bindings.map(({ label, key }) => [label, key])
   );
 }
 
@@ -15,7 +15,8 @@ export const DEFAULT_PROFILE = {
   label: "Default",
   leader: "g",
   bindings: {
-    ":slurp-forward": "Ctrl-ArrowRight",
+    "slurp-forward": "Ctrl-ArrowRight",
+    "barf-forward": "Ctrl-ArrowLeft",
   },
 };
 
@@ -31,7 +32,7 @@ export const VIM_PROFILE = {
   label: "Vim / Conjure",
   leader: "Space",
   bindings: {
-    ":slurp-forward": ">",
+    "slurp-forward": ">",
   },
 };
 
@@ -40,7 +41,7 @@ export const EMACS_PROFILE = {
   label: "Emacs / CIDER",
   leader: "g",
   bindings: {
-    ":slurp-forward": "F5",
+    "slurp-forward": "F5",
   },
 };
 
