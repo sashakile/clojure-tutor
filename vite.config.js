@@ -4,4 +4,7 @@ export default defineConfig({
   optimizeDeps: {
     include: ["@codemirror/state", "@codemirror/view", "@codemirror/commands"],
   },
+  test: {
+    environment: "happy-dom",
+  },
 });
