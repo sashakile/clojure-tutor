@@ -4,7 +4,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "spike": "vite spike",
     "build": "vite build",
     "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.0.10"
+  },
+  "dependencies": {
+    "@codemirror/commands": "^6.10.3",
+    "@codemirror/language": "^6.12.3",
+    "@codemirror/state": "^6.6.0",
+    "@codemirror/view": "^6.42.0",
+    "@nextjournal/clojure-mode": "^0.3.3",
+    "@replit/codemirror-emacs": "^6.1.0",
+    "@replit/codemirror-vim": "^6.3.0",
+    "squint-cljs": "^0.11.189"
   }
 }

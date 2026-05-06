@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clojure-tutor — phase-0 spike</title>
+    <style>
+      body { font-family: monospace; padding: 1rem; }
+      .editor-section { margin-bottom: 2rem; }
+      h2 { font-size: 1rem; margin-bottom: 0.5rem; }
+      .log-output { background: #f5f5f5; padding: 0.5rem; min-height: 2rem; white-space: pre; }
+      .cm-editor { border: 1px solid #ccc; }
+    </style>
+  </head>
+  <body>
+    <h1>Phase-0 Spike: CM6 action observation</h1>
+
+    <div class="editor-section">
+      <h2>Default keymap — press Ctrl+Right (slurpSexp)</h2>
+      <div id="editor-default"></div>
+      <div class="log-output" id="log-default">log: (none)</div>
+    </div>
+
+    <div class="editor-section">
+      <h2>Vim emulation — normal-mode press &gt; (expected: log stays empty — vim intercepts before CM6 keymap)</h2>
+      <div id="editor-vim"></div>
+      <div class="log-output" id="log-vim">log: (none)</div>
+    </div>
+
+    <div class="editor-section">
+      <h2>Emacs emulation — press Ctrl+Right (slurpSexp)</h2>
+      <div id="editor-emacs"></div>
+      <div class="log-output" id="log-emacs">log: (none)</div>
+    </div>
+
+    <script type="module" src="./spike.js"></script>
+  </body>
+</html>
