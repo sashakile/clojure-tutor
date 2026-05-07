@@ -47,7 +47,6 @@ export function installNavLayer(shell, panel, whichKey) {
     if (!isLeaderKey(event, profile.leader)) return;
 
     const editorRoot = focusedEditorRoot();
-    if (profile.leader !== "Space" && editorRoot) return;
     if (profile.leader === "Space" && profileId === "vim" && editorRoot && isVimInsertMode(shell, editorRoot)) return;
 
     event.preventDefault();

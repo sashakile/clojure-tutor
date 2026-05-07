@@ -59,7 +59,7 @@ export function createWhichKey({ onKey } = {}) {
       activeOnKey?.(event.key);
       hide();
     };
-    window.addEventListener("keydown", keydownHandler, { once: true });
+    window.addEventListener("keydown", keydownHandler, { once: true, capture: true });
   }
 
   return { show, hide };

@@ -13,7 +13,7 @@ function bindingsByKeyword(bindings) {
 export const DEFAULT_PROFILE = {
   id: "default",
   label: "Default",
-  leader: "g",
+  leader: "F2",
   bindings: {
     "slurp-forward": "Ctrl-ArrowRight",
     "barf-forward": "Ctrl-ArrowLeft",
@@ -23,7 +23,7 @@ export const DEFAULT_PROFILE = {
 export const CALVA_PROFILE = {
   id: "calva",
   label: "Calva",
-  leader: "g",
+  leader: "F2",
   bindings: bindingsByKeyword(CALVA_BINDINGS),
 };
 
@@ -39,7 +39,7 @@ export const VIM_PROFILE = {
 export const EMACS_PROFILE = {
   id: "emacs",
   label: "Emacs / CIDER",
-  leader: "g",
+  leader: "F2",
   bindings: {
     "slurp-forward": "F5",
   },

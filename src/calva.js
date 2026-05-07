@@ -1,6 +1,8 @@
 // Source: BetterThanTomorrow/calva package.json #contributes.keybindings (fetched 2026-05-06)
 // raise-sexp uses a VS Code chord (ctrl+alt+p ctrl+alt+r); simplified to Ctrl-Alt-r for CM6
-// slurp-forward / barf-forward have Linux variants (ctrl+alt+. and ctrl+alt+,) — using arrow key form
+// slurp-forward / barf-forward have Linux variants (ctrl+alt+. and ctrl+alt,) — using arrow key form
+// KNOWN LIMITATION: Ctrl+Alt+Arrow is grabbed by GNOME on Linux before the browser sees it.
+// Users on Linux/GNOME must remap or disable the workspace-switch shortcut to use these bindings.
 
 export const CALVA_BINDINGS = [
   { key: "Ctrl-Alt-ArrowRight", label: "slurp-forward" },
