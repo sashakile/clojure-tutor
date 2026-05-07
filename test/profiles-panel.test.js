@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
-import { createProfilesPanel } from "../src/nav/profiles-panel.js";
-import { PROFILES } from "../src/profiles/registry.js";
-import { getActiveProfile, setActiveProfile } from "../src/profiles/state.js";
+import { createProfilesPanel } from "../src/nav/profiles-panel.cljs";
+import { PROFILES } from "../src/profiles/registry.cljs";
+import { getActiveProfile, setActiveProfile } from "../src/profiles/state.cljs";
 
 function keydown(target, key) {
   target.dispatchEvent(new KeyboardEvent("keydown", { key, bubbles: true, cancelable: true }));

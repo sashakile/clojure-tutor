@@ -1,5 +1,5 @@
 import { describe, it, expect, afterEach } from "vitest";
-import { createWhichKey } from "../src/nav/which-key.js";
+import { createWhichKey } from "../src/nav/which-key.cljs";
 
 describe("createWhichKey", () => {
   afterEach(() => {

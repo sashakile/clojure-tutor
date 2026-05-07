@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
-import { installNavLayer } from "../src/nav/nav-layer.js";
-import { setActiveProfile } from "../src/profiles/state.js";
+import { installNavLayer } from "../src/nav/nav-layer.cljs";
+import { setActiveProfile } from "../src/profiles/state.cljs";
 
 function press(key, options = {}) {
   const event = new KeyboardEvent("keydown", {

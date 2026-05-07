@@ -3,7 +3,7 @@ import {
   getActiveProfile,
   onProfileChange,
   setActiveProfile,
-} from "../src/profiles/state.js";
+} from "../src/profiles/state.cljs";
 
 function restoreDefault() {
   setActiveProfile("default");

@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
-import { createFixture } from "../src/lesson/fixture.js";
-import { setActiveProfile } from "../src/profiles/state.js";
+import { createFixture } from "../src/lesson/fixture.cljs";
+import { setActiveProfile } from "../src/profiles/state.cljs";
 
 describe("createFixture", () => {
   beforeEach(() => {

@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { CALVA_BINDINGS } from "../src/calva.js";
-import { PROFILES } from "../src/profiles/registry.js";
+import { CALVA_BINDINGS } from "../src/calva.cljs";
+import { PROFILES } from "../src/profiles/registry.cljs";
 
 const REQUIRED_PROFILES = ["default", "calva", "vim", "emacs"];
 

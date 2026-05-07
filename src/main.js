@@ -1,3 +1,3 @@
-import { createShell } from "./editor/shell.js";
+import { createShell } from "./editor/shell.cljs";
 
 createShell(document.getElementById("app"));

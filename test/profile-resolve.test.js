@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { PROFILES } from "../src/profiles/registry.js";
-import { resolveBindings } from "../src/profiles/resolve.js";
+import { PROFILES } from "../src/profiles/registry.cljs";
+import { resolveBindings } from "../src/profiles/resolve.cljs";
 
 describe("resolveBindings", () => {
   it("returns own bindings for a flat profile", () => {

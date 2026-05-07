@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { CALVA_BINDINGS } from "../src/calva.js";
+import { CALVA_BINDINGS } from "../src/calva.cljs";
 
 const REQUIRED_LABELS = [
   "slurp-forward",

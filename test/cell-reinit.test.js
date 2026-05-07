@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from "vitest";
-import { createCell } from "../src/editor/cell.js";
-import { resolveBindings } from "../src/profiles/resolve.js";
+import { createCell } from "../src/editor/cell.cljs";
+import { resolveBindings } from "../src/profiles/resolve.cljs";
 
 const SAMPLE = `(defn greet [name]\n  (str "hello " name))`;
 

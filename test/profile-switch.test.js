@@ -1,9 +1,9 @@
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
-import { createCell } from "../src/editor/cell.js";
-import { evalClojure } from "../src/pipeline/eval.js";
-import { getActiveProfile, setActiveProfile } from "../src/profiles/state.js";
-import { applyProfileSwitch } from "../src/profiles/switch.js";
-import { resolveBindings } from "../src/profiles/resolve.js";
+import { createCell } from "../src/editor/cell.cljs";
+import { evalClojure } from "../src/pipeline/eval.cljs";
+import { getActiveProfile, setActiveProfile } from "../src/profiles/state.cljs";
+import { applyProfileSwitch } from "../src/profiles/switch.cljs";
+import { resolveBindings } from "../src/profiles/resolve.cljs";
 
 const SAMPLE = `(defn greet [name]\n  (str "hello " name))`;
 

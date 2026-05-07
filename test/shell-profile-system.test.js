@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
-import { createShell } from "../src/editor/shell.js";
-import { setActiveProfile } from "../src/profiles/state.js";
+import { createShell } from "../src/editor/shell.cljs";
+import { setActiveProfile } from "../src/profiles/state.cljs";
 
 describe("createShell profile-system wiring", () => {
   let shell;

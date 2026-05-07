@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { renderKeybindings } from "../src/lesson/keybinding.js";
-import { setActiveProfile } from "../src/profiles/state.js";
+import { renderKeybindings } from "../src/lesson/keybinding.cljs";
+import { setActiveProfile } from "../src/profiles/state.cljs";
 
 describe("renderKeybindings", () => {
   beforeEach(() => {

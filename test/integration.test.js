@@ -7,7 +7,7 @@ import { vim, Vim, getCM } from "@replit/codemirror-vim";
 import { emacs, EmacsHandler } from "@replit/codemirror-emacs";
 import { create as createLog } from "../src/validation/action-log.js";
 import { wrapCommand } from "../src/validation/command-wrapper.js";
-import { evalClojure, resetSession } from "../src/pipeline/eval.js";
+import { evalClojure, resetSession } from "../src/pipeline/eval.cljs";
 
 const SAMPLE = `(defn greet [name]
   (str "hello " name))`;
