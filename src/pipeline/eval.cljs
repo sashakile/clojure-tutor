@@ -1,5 +1,5 @@
 (ns pipeline.eval
-  (:require ["squint-cljs/core.js" :as squint-core]
+  (:require ["squint-cljs/core.js" :as sq-core]
             ["squint-cljs" :refer [compileString]]))
 
 (def ^:private re-var (js/RegExp. "^var (\\w+) = ([\\s\\S]*);$"))
@@ -37,7 +37,7 @@
                                        (str "return (" return-expr ");")])
                           "\n")
               f (js/Function. "squint_core" code)
-              result (f squint-core)]
+              result (f sq-core)]
           #js {:result result :error nil})))
     (catch js/Error e
       #js {:result nil :error (.-message e)})))

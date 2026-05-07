@@ -34,15 +34,14 @@
       (.appendChild panes output-pane)
       (.appendChild container panes)
 
-      (defn on-eval [view]
-        (let [source (.toString (.-doc (.-state view)))
-              res (evalClojure source)]
-          (set! (.-textContent output-pane)
-                (if (not= nil (.-error res))
-                  (str "Error: " (.-error res))
-                  (str (.-result res))))))
-
-      (let [cell (createCell editor-pane #js {:onEval on-eval})]
+      (let [on-eval (fn [view]
+                      (let [source (.toString (.-doc (.-state view)))
+                            res (evalClojure source)]
+                        (set! (.-textContent output-pane)
+                              (if (not= nil (.-error res))
+                                (str "Error: " (.-error res))
+                                (str (.-result res))))))
+            cell (createCell editor-pane #js {:onEval on-eval})]
         (.push cells cell)
 
         (let [unsubscribe-profile (onProfileChange
