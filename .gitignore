@@ -36,3 +36,7 @@ coverage/
 *.png
 *.mp4
 *.webm
+
+# Playwright
+.playwright-mcp/
+playwright.config.js

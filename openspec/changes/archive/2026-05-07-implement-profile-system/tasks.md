@@ -105,7 +105,7 @@
 - [x] 6.1 Run `openspec validate implement-profile-system --strict` and resolve
       all issues before marking the proposal ready for approval
 - [x] 6.2 Run `just test` and confirm all new tests in §5 pass with no regressions
-- [ ] 6.3 Run `just dev`, open browser, and verify: leader key fires the overlay,
+- [x] 6.3 Run `just dev`, open browser, and verify: leader key fires the overlay,
       overlay lists hints, `[leader] p` opens the profiles panel, panel supports
       arrow-key navigation, selecting a profile updates keybinding text in the
       fixture slide
